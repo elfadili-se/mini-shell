@@ -1,26 +1,57 @@
-Mini Shell
+# 🖥️ Mini Shell
+## Description
 
-A simple command-line shell program written in C, designed to mimic basic Unix shell functionality.
-Featuress
-Command Execution: Run external programs and built-in commands like pwd, echo, exit, cd, cp, and mv.
+This project is a custom shell implementation in C that mimics the basic behavior of Unix shells.
+It allows users to run system commands, handle arguments, and even execute custom programs that I developed (pwd, echo, cp, and mv).
+The shell is built from scratch using system calls like fork(), execve(), and wait().
 
-Argument Parsing: Accepts multiple arguments for commands (e.g., cp file1 file2).
+## Features
 
-Custom Prompt: Displays a customizable prompt to the user.
+⚙️ Command Execution: Run built-in commands and external programs.
 
-Environment Variables: Supports basic environment variable handling.
+📂 Argument Parsing: Supports multiple arguments (e.g., cp file1 file2).
 
-System Calls: Uses system calls such as fork(), execve(), wait(), and getcwd() to implement shell functionality.
+⌨️ Custom Prompt: Displays a simple shell prompt for user interaction.
 
-Files
+🚦 Signal Handling: Handles signals like Ctrl+C and Ctrl+D.
 
+🌍 Environment Support: Uses execve() and execvp() with environment variables.
 
-mini_shell.c: The main shell program.
+🛠️ System Calls: Implemented using low-level system calls (fork, execve, wait, getcwd, etc.).
 
-pwd.c: Implements the pwd command .
+📝 Custom Commands: Developed my own versions of:
 
-echo.c: Implements the echo command.
+pwd (using getcwd())
 
-cp.c: Implements the cp command.
+echo (using syscalls functions)
 
-mv.c: Implements the mv command.
+cp
+
+mv
+
+## Technologies Used
+
+C programming language
+
+Linux system calls (fork, execve, wait, getcwd,write,read and open )
+
+GCC compiler
+
+Makefile (optional, for compilation)
+
+## How It Works
+
+The shell displays a prompt and waits for user input.
+
+Input is parsed using strtok() to split commands and arguments.
+
+The shell creates a child process using fork().
+
+In the child, the command is executed using execve() or execvp().
+
+The parent process waits for the child to finish using wait().
+
+The cycle repeats until the user types exit.
+## Author
+
+👨‍💻 Developed by **Elfadili**, embedded enginner student passionate about systems programming Linux, and low-level C development.
