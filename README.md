@@ -37,8 +37,6 @@ Linux system calls (fork, execve, wait, getcwd,write,read and open )
 
 GCC compiler
 
-Makefile (optional, for compilation)
-
 ## How It Works
 
 The shell displays a prompt and waits for user input.
@@ -54,4 +52,5 @@ The parent process waits for the child to finish using wait().
 The cycle repeats until the user types exit.
 ## Author
 
-👨‍💻 Developed by **Elfadili**, embedded enginner student passionate about systems programming Linux, and low-level C development.
+👨‍💻 Developed by **Elfadili**, embedded engineer student passionate about systems programming Linux, and low-level C development.
+
